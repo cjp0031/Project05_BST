@@ -1,3 +1,17 @@
 # Project05_BST
-I would like to add a skill to the Rogue that does more damage as the Rogue's health gets lower. An tentative example of this is:
-Damage = (100 - Current HP)
+Revised skills to be added to each class (numbers are tentative and can be adjusted if necessary):
+Rogue:
+"DesperateAttack": Deals more damage to a target as the Rogue's health decreases
+Damage = (30 - Current HP)
+
+Mage:
+"LesserHealing": Heals a target similiarly to the Priest's "GreaterHealing" skill, but using the Mage's Intelligence
+Healing = (1 * Intelligence)
+
+Priest:
+"LifeAttack": Deals more damage to a target as the Priest's HP increases
+Damage = (2 * Current HP)
+
+Warrior:
+"HealingPotion": Heal a target for a small, fixed amount of HP
+Healing = 5
