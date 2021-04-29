@@ -18,6 +18,11 @@ void Warrior::ShieldSmash(Entity * target)
     Attack(target, GetStrength() * 2.0, "Shield Smash");
 }
 
+void Warrior::HealingPotion(Entity * target)
+{
+    Heal(target, 5, "Healing Potion");
+}
+
 void Warrior::OutputStatus() const
 {
     std::cout << Class() << ": " << this->Name()
@@ -48,6 +53,11 @@ void Warrior::UseAction(Entity * target, const std::string& spellName, const std
     if(spellName == "shield_smash")
     {
         ShieldSmash(target);
+        return;
+    }
+    if(spellName == "healing_potion")
+    {
+        HealingPotion(target);
         return;
     }
     errorFindingAbility(spellName);

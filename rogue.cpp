@@ -23,6 +23,11 @@ void Rogue::Blindside(Entity * target)
     Attack(target, 20, "Blindside");
 }
 
+void Rogue::DesperateAttack(Entity * target)
+{
+    Attack(target, (30 - CurrentHP()), "Desperate Attack");
+}
+
 void Rogue::OutputStatus() const
 {
     std::cout << Class() << ": " << this->Name()
@@ -64,7 +69,11 @@ void Rogue::UseAction(Entity * target, const std::string& spellName, const std::
         Blindside(target);
         return;
     }
-
+    if(spellName == "desperate_attack")
+    {
+        DesperateAttack(target);
+        return;
+    }
     
     errorFindingAbility(spellName);
 

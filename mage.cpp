@@ -21,6 +21,11 @@ void Mage::MagicMissiles(Entity *target)
     Attack(target, GetIntelligence() * 0.5, "Magic Missile");
 }
 
+void Mage::LesserHealing(Entity *target)
+{
+    Heal(target, GetIntelligence(), "Lesser Healing");
+}
+
 void Mage::OutputStatus() const
 {
     std::cout << Class() << ": " << this->Name()
@@ -51,6 +56,11 @@ void Mage::UseAction(Entity * target, const std::string& spellName, const std::s
     if(spellName == "magic_missile")
     {
         MagicMissiles(target);
+        return;
+    }
+    if(spellName == "lesser_healing")
+    {
+        LesserHealing(target);
         return;
     }
     errorFindingAbility(spellName);
