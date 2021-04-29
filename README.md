@@ -1,5 +1,6 @@
 # Project05_BST
 Revised skills to be added to each class (numbers are tentative and can be adjusted if necessary):
+
 Rogue:
 "DesperateAttack": Deals more damage to a target as the Rogue's health decreases
 Damage = (30 - Current HP)
