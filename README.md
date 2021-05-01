@@ -16,3 +16,5 @@ Damage = (2 * Current HP)
 Warrior:
 "HealingPotion": Heal a target for a small, fixed amount of HP
 Healing = 5
+
+(I forgot that I needed to do 2 commits for the code modifications and committed it all at once, but I have also done several small commits setting the project up)
